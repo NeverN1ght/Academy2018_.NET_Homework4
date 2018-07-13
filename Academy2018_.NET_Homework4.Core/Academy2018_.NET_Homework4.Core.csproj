@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="FluentValidation" Version="7.6.104" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Academy2018_.NET_Homework4.Infrastructure\Academy2018_.NET_Homework4.Infrastructure.csproj" />
+    <ProjectReference Include="..\Academy2018_.NET_Homework4.Shared\Academy2018_.NET_Homework4.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
