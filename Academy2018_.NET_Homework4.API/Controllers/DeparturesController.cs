@@ -93,7 +93,7 @@ namespace Academy2018_.NET_Homework4.API.Controllers
             try
             {
                 _departureService.Delete(id);
-                return Ok();
+                return NoContent();
             }
             catch (NotExistException)
             {

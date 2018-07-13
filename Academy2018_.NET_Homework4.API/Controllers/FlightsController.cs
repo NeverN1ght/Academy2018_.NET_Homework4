@@ -31,7 +31,7 @@ namespace Academy2018_.NET_Homework4.API.Controllers
 
         // GET: api/Flights/5
         [HttpGet("{number}")]
-        public IActionResult Get(Guid number)
+        public IActionResult Get(string number)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace Academy2018_.NET_Homework4.API.Controllers
         
         // PUT: api/Flights/5
         [HttpPut("{number}")]
-        public IActionResult Put(Guid number, [FromBody] FlightDto dto)
+        public IActionResult Put(string number, [FromBody] FlightDto dto)
         {
             try
             {
@@ -88,12 +88,12 @@ namespace Academy2018_.NET_Homework4.API.Controllers
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{number}")]
-        public IActionResult Delete(Guid number)
+        public IActionResult Delete(string number)
         {
             try
             {
                 _flightsService.Delete(number);
-                return Ok();
+                return NoContent();
             }
             catch (NotExistException)
             {

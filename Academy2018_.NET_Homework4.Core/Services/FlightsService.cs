@@ -77,7 +77,7 @@ namespace Academy2018_.NET_Homework4.Core.Services
 
                 if (validationResult.IsValid)
                 {
-                    _repository.Update((Guid)id,
+                    _repository.Update((string)id,
                         _mapper.Map<FlightDto, Flight>(dto));
                 }
                 else
@@ -95,7 +95,7 @@ namespace Academy2018_.NET_Homework4.Core.Services
         {
             if (_repository.IsExist(id))
             {
-                _repository.Delete((Guid)id);
+                _repository.Delete((string)id);
             }
             else
             {
